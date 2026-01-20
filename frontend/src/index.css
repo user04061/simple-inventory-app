@@ -1,0 +1,118 @@
+body {
+  font-family: sans-serif;
+  background-color: #f8f8f8;
+  margin: 20px;
+  color: #333;
+}
+
+h1, h2 {
+  color: #222;
+}
+
+button {
+  margin-left: 5px;
+  padding: 4px 8px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+input {
+  margin: 4px 0;
+  padding: 4px;
+  display: block;
+  width: 200px;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  gap: 40px;
+}
+
+.add-item {
+  flex: 1;
+}
+
+.item-list {
+  flex: 2;
+  padding-right: 20px;
+  overflow-x: auto;
+}
+
+.item-list table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.item-list th, .item-list td {
+  padding: 8px 12px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  overflow: visible;
+  white-space: normal;
+  text-overflow: unset;
+  box-sizing: border-box;
+}
+
+/* title column truncates */
+.item-list th:nth-child(1),
+.item-list td:nth-child(1) {
+  width: 25%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* description column wraps */
+.item-list th:nth-child(2),
+.item-list td:nth-child(2) {
+  width: 57%;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+/* quantity column centered */
+.item-list th:nth-child(3),
+.item-list td:nth-child(3) {
+  width: 10%;
+  text-align: center;
+  white-space: normal;
+}
+
+/* actions column fixed width, nowrap */
+.item-list th:nth-child(4),
+.item-list td:nth-child(4) {
+  width: 180px;
+  min-width: 180px;
+  max-width: 180px;
+  text-align: center;
+  white-space: nowrap;
+  padding: 0 8px;
+}
+
+td.actions {
+  display: inline-flex;
+  justify-content: center;
+  gap: 6px;
+  white-space: nowrap;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+td button {
+  margin: 0;
+  padding: 4px 8px;
+  font-size: 0.9em;
+  white-space: nowrap;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th {
+  background-color: #eee;
+}
